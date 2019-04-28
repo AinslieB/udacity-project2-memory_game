@@ -1,5 +1,5 @@
 # Memory Game: Udacity Project 2
-This browser-based memory game is a remake of the classic Concentration game, but with a new twist. ***Gotta Get to Work*** has a career theme and attempts to mimic the stress of getting to work on time, by whatever means possible.
+This browser-based memory game is a remake of the classic Concentration game, but with a new twist. ***Gotta Get to Work*** has a career theme and is a tongue-in-cheek attempt to mimic the stress of getting to work on time, by whatever means possible.
 
 ## Copy the Files from GitHub
 
