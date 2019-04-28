@@ -32,7 +32,7 @@ The game contains the following features:
 * *You Won!* When all 16 cards are matched, a modal is displayed to congratulate the user. It contains:
   * The number of moves it took to win the game
   * The player's star rating
-  * Play Again button to restart the game
+  * _Play Again_ button to restart the game
   * Close box to close the modal without restarting the game
 
 ## Constraints and Known Bugs
