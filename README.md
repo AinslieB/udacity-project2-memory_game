@@ -18,7 +18,7 @@ This browser-based memory game is a remake of the classic Concentration game, bu
 ## How to Play
 The game board consists of 8 pairs of matched images--a total of 16 cards--turned face down until the game begins. The cards are randomly shuffled each time the game is started. Cards are flipped one at a time by clicking a card. The objective of the game is to match all 16 cards. Only two cards can be shown at a time. If the images match, the cards remain face up. If they do not match, they are turned over so the images do not show.
 
-<img src="../img/skyscrapers.jpg" width="420">
+<img src="img/memory_game.jpg" width="420">
 
 The game contains the following features:
 
