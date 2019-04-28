@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Gotta Get to Work Matching Game</title>
+      <meta name="description" content="">
+      <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+      <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
+      <!--<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">-->
+      <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+      <link rel="stylesheet" href="css/app.css">
+   </head>
+   <body>
+      <div class="container">
+         <header>
+            <h1><b><em>Gotta Get to Work</b></em></h1>
+         </header>
+         <section class="score-panel">
+            <ul class="stars">
+               <li><i class="fas fa-star" style="font-size:32px;color:yellow;"></i></li>
+               <li><i class="fas fa-star" style="font-size:32px;color:yellow;"></i></li>
+               <li><i class="fas fa-star" style="font-size:32px;color:yellow;"></i></li>
+            </ul>
+            <span class="moves">3</span><span id="movesLabel"> Moves</span>
+            <span id="timerLabel"> Time: </span>
+            <span class="timer"> <time>00:00</time></span>
+            <span>
+               <div class="restart">Restart
+                  <i class="fas fa-redo" style="font-size:32px;"></i>
+               </div>
+            </span>
+         </section>
+         <ul class="deck">
+            <li class="card">
+               <i class="fas fa-plane fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-bus-alt fa-2x"></i>
+            </li>
+            <li class="card match">
+               <i class="fas fa-car-side fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-train fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-horse fa-2x"></i>
+            </li>
+            <li class="card match">
+               <i class="fas fa-car-side fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-walking fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-bicycle fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-plane fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-skiing fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-walking fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-skiing fa-2x"></i>
+            </li>
+            <li class="card open show">
+               <i class="fas fa-train fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-bicycle fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-bus-alt fa-2x"></i>
+            </li>
+            <li class="card">
+               <i class="fas fa-horse fa-2x"></i>
+            </li>
+         </ul>
+      </div>
+      <dialog id=youWon class="you-won-modal">
+         <h1>Congratulations!</h1>
+         <h2>You made it to work on time</h2>
+         <h2>You got there in <span id="totalMoves"></span> moves</h2>
+         <h2>Your commute time is <span id="totalTime"></span></h2>
+
+         <h2>
+            Your rating is
+            <span id="totalStars">
+
+               <i id=star1 class="fas fa-star"></i>
+               <i id=star2 class="fas fa-star"></i>
+               <i id=star3 class="fas fa-star"></i>
+            </span>
+         </h2>
+         <br></br>
+
+         <div class="actions">
+            <button class=play-again-btn>Play again</button>
+            <button class=close-modal-btn>&times</button>
+         </div>
+      </dialog>
+      <script src="js/app.js"></script>
+   </body>
+</html>

@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background-image: url(../img/skyscrapers.jpg); /* Free download from Pexel*/
+    background-size: cover;
+    background=position: center center;
+    font-family: "Coda", cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: "Open Sans", sans-serif;
+    font-color: charcoal;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 250;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(#0c4f6c 0%, #86867a 50%, #4e4131 100%);
+    /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);*/
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #8f9879;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    /*background: #02ccba;*/
+    background: #ffc97c;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    max-width: 75%;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 1.75rem;
+    padding-left: 36px;
+}
+
+.score-panel .restart:hover, .span:focus {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*
+ * Styles for the Moves Counterl
+ */
+
+.moves {
+  font-size: 1.75rem;
+  display: inline-block;
+  padding: 0 6px 0 36px;
+}
+
+#movesLabel {
+  font-size: 1.75rem;
+}
+
+/*
+ * Styles for the Timer
+ */
+
+.timer {
+  display: inline-block;
+  font-size: 1.75rem;
+  padding-left: 6px;
+}
+
+#timerLabel {
+  font-size: 1.75rem;
+  padding-left: 36px;
+}
+
+/*
+ * Styles for the Modal using HTML5 Dialog Element
+ */
+
+ .dialog {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   transform: translate(-50%, -50%);
+   background-color: red;
+   opacity: .5
+   border-radius: 10px;
+}
+
+   .dialog-content {
+     text-align: center;
+     color: charcoal;
+     text-align: center;
+     background-color: #8cbef1;
+     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+     background-color: yellow;
+     border-radius: 10px;
+     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+     }
+
+dialog[open] {
+  animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+}
+
+dialog::backdrop {
+  background: rgba(255,0,0,.25);
+}
+
+dialog .actions {
+  display: flex;
+  justify-content: space around;
+}
+
+.play-again-btn {
+  font-size: 2rem;
+  text-align: center;
+  float: center;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  height: 65px;
+  width: 200px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffc97c;
+}
+
+.play-again-btn:hover, .span:focus {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-modal-btn {
+  /*color: rust;*/
+  font-size: 1.5rem;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+}
+
+.close-modal-btn:hover, .span:focus {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
